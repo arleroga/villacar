@@ -1,0 +1,426 @@
+/********************************************/
+/* SECTION BASIC SETUP */
+/********************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #fff;
+  color: #555;
+  font-family: "Lato", "Arial", "sans-serif";
+  font-weight: 300;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/**** End of Section BASIC SETUP ****/
+
+/********************************************/
+/* SECTION REUSABLE COMPONENTS */
+/********************************************/
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.box {
+  padding: 1%;
+}
+
+/* ------ HEADINGS ---------*/
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  font-size: 210%;
+  word-spacing: 4px;
+  letter-spacing: 1px;
+  /*text-transform: initial;*/
+}
+
+h2 {
+  font-size: 180%;
+  word-spacing: 2px;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #f1c40f;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+/* ------ PARAGRAPH ---------*/
+
+.long-copy {
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+/* ------ ICONS ---------*/
+
+.iconb {
+  font-size: 400%;
+  display: block;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  color: #f1c40f;
+  font-size: 120%;
+  /*Secrets to align text and icons*/
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* ------ BUTTONS ---------*/
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.inputEnv {
+  background-color: #f1c40f;
+  border: 1px solid #f1c40f;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #f1c40f;
+  border: 1px solid #f1c40f;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #f1c40f;
+  color: #f1c40f;
+}
+
+.btn:hover,
+.btn:active,
+.inputEnv:hover,
+.inputEnv:active {
+  background: #d2aa0c;
+}
+
+.btn-full:hover,
+.btn-full:active,
+.inputEnv:hover,
+.inputEnv:active {
+  background-color: #d2aa0c;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #d2aa0c;
+  color: #fff;
+}
+
+/**** End of Section REUSABLE COMPONENTS ****/
+
+/********************************************/
+/* SECTION HEADER */
+/********************************************/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/resources/css/img/hero-villacarolina.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero-text-box {
+  position: absolute;
+  width: 1140px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #f1c40f;
+}
+
+/**** End of Section HEADER ****/
+
+/********************************************/
+/* SECTION FEATURES */
+/********************************************/
+
+.section-features .long-copy {
+  margin-bottom: 30px;
+}
+
+/********************************************/
+/* SECTION PLACE */
+/********************************************/
+
+.section-places {
+  padding: 0;
+}
+
+.places-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.places-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.place-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.place-photo img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.place-photo img:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/********************************************/
+/* SECTION PRICE */
+/********************************************/
+
+.section-price {
+  background-color: #f4f4f4;
+}
+
+.temporada {
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 2px 2px #efefef;
+}
+
+.temporada div {
+  padding: 10%;
+  border-bottom: 1px solid rgb(230, 228, 228);
+}
+
+.temporada div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.temporada div:last-child {
+  text-align: left;
+  padding-left: 0%;
+  padding-right: 0%;
+  border: 0;
+}
+
+.temporada-price {
+  font-size: 200%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #f1c40f;
+}
+
+.temporada-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.temporada-price-person {
+  font-size: 80%;
+}
+
+.temporada ul {
+  list-style: none;
+}
+
+.temporada ul li {
+  padding: 5px 0;
+}
+
+/*=============================================
+= FORM =
+=============================================*/
+
+.contact-form {
+  width: 60%;
+  margin: 0, auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+/*=============================================
+= FOOTER =
+=============================================*/
+
+footer {
+  background-color: #333;
+  padding: 50px;
+  font-size: 80%;
+}
+
+.footer-nav {
+  list-style: none;
+  float: left;
+}
+
+.social-icons {
+  list-style: none;
+  float: right;
+}
+
+.footer-nav li,
+.social-icons li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-icons li:last-child {
+  margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-icons li a:link,
+.social-icons li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #888;
+  transition: color 0, 2s;
+}
+
+.social-icons li a:link,
+.social-icons li a:visited {
+  font-size: 160%;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+}
